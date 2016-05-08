@@ -1,0 +1,19 @@
+body {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.location_info {
+    margin-top: 30px;
+}
+
+#location-methods {
+    border-top-style: solid;
+    border-bottom-style: solid;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#location-list {
+    padding-top: 30px;
+}

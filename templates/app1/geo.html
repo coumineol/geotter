@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+{% block content %}
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Geo</title>
+
+    {% load staticfiles %}
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/geo.css" type="text/css">
+    <script src="/static/js/jquery-2.2.1.js"></script>
+    <script src="/static/js/geo.js"></script>
+
+</head>
+
+<body>
+
+    <div id="user-info">
+
+    </div>
+
+    <div id="location-methods">
+
+        <div class="location_info">
+
+            <p>Click here for granting access to your location: </p>
+            <a id="grant-permission">Grant</a>
+
+        </div>
+
+        <div class="location_info">
+
+            <p>Or enter the name of your city:
+                <input id="city-name" name="city-name" type="text" placeholder="City" />
+            </p>
+
+            <a id="locate-city">Locate</a>
+
+        </div>
+
+        <div class="location_info">
+
+            <p>Or enter the name of your country and ZIP code:
+                <input id="country-name" name="country-name" type="text" placeholder="Country" />
+                <input id="zip-code" name="zip-code" type="number" placeholder="ZIP code" />
+            </p>
+
+            <a id="locate-country">Locate</a>
+
+        </div>
+
+    </div>
+
+    <div id="locations">
+
+        <p>Your locations:</p>
+
+        <ul id="location-list">
+
+            {% for location in object_list %}
+                <li>Date: {{ location.date | date:"Y-m-d"}} - Latitude: {{ location.latitude }} - Longitude: {{ location.longitude }}</li>
+            {% endfor %}
+
+        </ul>
+
+    </div>
+
+</body>
+
+{% endblock %}
+
+</html>

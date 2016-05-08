@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+{% block content %}
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>JuliaCoding</title>
+
+    {% load staticfiles %}
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/julia.css" type="text/css">
+    <script src="/static/js/jquery-2.2.1.js"></script>
+    <script src="/static/js/julia.js"></script>
+
+</head>
+
+<body>
+
+    <div id="user-info">
+
+    </div>
+
+    <div id="julia-start">
+
+        <p>Please enter a twitter username:</p>
+
+        <input id="twitter-name" name="twitter-name" type="text" placeholder="" />
+
+        <div>
+
+            <a id="get-followers">Start</a>
+
+        </div>
+
+    </div>
+
+    <div id="julia-info">
+
+    </div>
+
+</body>
+
+{% endblock %}
+
+</html>

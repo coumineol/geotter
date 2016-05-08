@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Register</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css">
+
+</head>
+
+<body>
+
+    <form id="registerform" method="POST" action="/registered/">{% csrf_token %}
+
+        <p><label for="username">Username: </label><input class="inputarea" type="text" id="username" name="username"></p>
+        <p><label for="password">Password: </label><input class="inputarea" type="text" id="password" name="password"></p>
+        <p><input type="submit" value="Register"></p>
+
+    </form>
+
+</body>
+
+</html>
